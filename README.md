@@ -1,6 +1,6 @@
 # Icon Resize CLI
 
-![screenshot](screenshot.png)
+![screenshot](https://i.imgur.com/K00hCxN.png)
 
 [![GitHub](https://img.shields.io/github/license/hoishing/icon-resize)](https://opensource.org/licenses/MIT)
 
