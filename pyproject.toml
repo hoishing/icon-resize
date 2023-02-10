@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "icon-resize"
+version = "0.1.0"
+description = ""
+authors = ["Kelvin Ng <hoishing@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "icon_resize" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = { extras = ["all"], version = "^0.7.0" }
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+icon-resize = "icon_resize:entry"
+kng = "icon_resize:main"

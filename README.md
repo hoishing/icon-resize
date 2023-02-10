@@ -1,10 +1,17 @@
 # Icon Resize CLI
 
+![py-badge] [![black-badge]][black-url] ![mit]
+
 ![screenshot](https://i.imgur.com/K00hCxN.png)
 
-[![GitHub](https://img.shields.io/github/license/hoishing/icon-resize)](https://opensource.org/licenses/MIT)
-
 > CLI to create lossless icons in multiple sizes
+
+🔗 [source code](https://github.com/hoishing/icon-resize)
+
+[mit]: https://img.shields.io/github/license/hoishing/icon-resize
+[black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
+[black-url]: https://github.com/psf/black
+[py-badge]: https://img.shields.io/badge/python-3.10%20%7C%203.11-blue
 
 ## Features
 
@@ -17,30 +24,31 @@
 - macOS or Linux
 - python3.10+
 - [Typer][typer] `pip install "typer[all]"`
-- macOS
-  - [optipng][optipng] `brew install optipng`
-- Linux
-  - [Image Magick][magick] `brew install imagemagick`
+- [Image Magick][magick] `brew install imagemagick`
 
 ## Usage
 
+- clone the repo `git clone https://github.com/hoishing/icon-resize`
+- install the env with [poetry] `poetry install`
+- start the env `poetry shell`
+
 ```shell
-# display help
-python3 icon-resize.py --help
+# default resize to 256, 128, 64
+icon-resize mic-512
 
-# create icons with default sizes(256, 128 and 64) in current folder
-python3 icon-resize.py <icon-file>
+# specify resize to 128, 64
+icon-resize mic-512 --sizes "128,64"
 
-# create icons with specific sizes in current folder
-python3 icon-resize.py --sizes 512,256,128 <icon-file>
+# save to 'mic' folder with default sizes
+icon-resize mic-512 --out-folder mic/
 
-# create icons with specific sizes and destination folder
-python3 icon-resize.py --sizes 1024,512 --out-folder ~/Downloads <icon-file>
+# enable autocomplete in current session
+eval "$(_ICON_RESIZE_COMPLETE=zsh_source icon_resize)"
 ```
 
 ## Technical Details
 
-🔗 [source code](https://github.com/hoishing/icon-resize)
+
 
 - use [Typer][typer] for CLI and help docs generation
 
@@ -62,3 +70,4 @@ Open a [github issue](https://github.com/hoishing/icon-resize/issues) or ping me
 [typer]: https://typer.tiangolo.com
 [optipng]: https://formulae.brew.sh/formula/optipng
 [magick]: https://imagemagick.org
+[poetry]: https://python-poetry.org/
