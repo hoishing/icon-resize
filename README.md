@@ -6,12 +6,13 @@
 
 > CLI to create lossless icons in multiple sizes
 
-🔗 [source code](https://github.com/hoishing/icon-resize)
+🔗 [source code]
 
 [mit]: https://img.shields.io/github/license/hoishing/icon-resize
 [black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black-url]: https://github.com/psf/black
 [py-badge]: https://img.shields.io/badge/python-3.10%20%7C%203.11-blue
+[source code]: https://github.com/hoishing/icon-resize-cli/
 
 ## Features
 
@@ -23,13 +24,14 @@
 
 - macOS or Linux
 - python3.10+
+- [poetry]
 - [Typer][typer] `pip install "typer[all]"`
 - [Image Magick][magick] `brew install imagemagick`
 
 ## Usage
 
 - clone the repo `git clone https://github.com/hoishing/icon-resize`
-- install the env with [poetry] `poetry install`
+- install the env `poetry install`
 - start the env `poetry shell`
 
 ```shell
@@ -48,26 +50,16 @@ eval "$(_ICON_RESIZE_COMPLETE=zsh_source icon_resize)"
 
 ## Technical Details
 
-
-
 - use [Typer][typer] for CLI and help docs generation
-
-### macOS
-
-- use built-in `sips` to resize images
-- use [optipng][optipng] to compress png files
-
-Choosing `sips` + `optipng` because they provide better compression then `Image Magick` in general without parameters tuning.
-
-### Linux
-
 - use [Image Magick][magick] for both resize and compress images
 
-## Need Help?
+## Questions?
 
-Open a [github issue](https://github.com/hoishing/icon-resize/issues) or ping me on [Twitter](https://twitter.com/hoishing) ![](https://api.iconify.design/logos/twitter.svg?width=20)
+Open a [github issue] or ping me on [Twitter ![twitter-icon]][Twitter]
 
+[github issue]: https://github.com/hoishing/icon-resize-cli/issues
+[Twitter]: https://twitter.com/intent/tweet?text=https://github.com/hoishing/icon-resize-cli/%20%0D@hoishing
+[twitter-icon]: https://api.iconify.design/logos/twitter.svg?width=20
 [typer]: https://typer.tiangolo.com
-[optipng]: https://formulae.brew.sh/formula/optipng
 [magick]: https://imagemagick.org
 [poetry]: https://python-poetry.org/
