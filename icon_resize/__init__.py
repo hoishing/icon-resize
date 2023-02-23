@@ -2,7 +2,7 @@
 
 import typer, re
 from pathlib import Path
-from subprocess import getstatusoutput
+from subprocess import getstatusoutput, check_output, STDOUT
 from typer import Argument, Option
 
 
@@ -16,6 +16,8 @@ def main(
     ),
 ):
     """resize icon / image with diff sizes"""
+    check_imagemagick_installed()
+
     src = Path(src_image)
     sizes_arr = sizes.split(",")
     name_arr = re.split(r"(\d+)", src.name)
@@ -31,6 +33,21 @@ def main(
         code, _ = getstatusoutput(f"convert {src} -resize {size}x{size} {out_file}")
         assert code == 0
         print("resized:", out_file)
+
+
+def check_imagemagick_installed():
+    try:
+        # Run the "convert --version" command in Linux or macOS
+        output = check_output(["convert", "--version"], stderr=STDOUT)
+    except FileNotFoundError:
+        try:
+            # Run the "magick --version" command in Windows
+            output = check_output(["magick", "--version"], stderr=STDOUT)
+        except FileNotFoundError:
+            # If neither command is found, ImageMagick is not installed
+            return False
+    # If the command runs successfully, ImageMagick is installed
+    return True
 
 
 def entry():
