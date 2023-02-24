@@ -1,6 +1,6 @@
 # Icon Resize CLI
 
-[![ci-badge]][ci-url] [![pypi-badge]][pypi-url] ![py-badge] [![black-badge]][black-url] ![mit]
+[![pypi-badge]][pypi-url] ![py-badge] [![black-badge]][black-url] ![mit]
 
 ![screenshot](https://i.imgur.com/K00hCxN.png)
 
@@ -60,7 +60,5 @@ Open a [github issue] or ping me on [Twitter ![twitter-icon]][Twitter]
 [twitter-icon]: https://api.iconify.design/logos/twitter.svg?width=20
 [typer]: https://typer.tiangolo.com
 [magick]: https://imagemagick.org
-[ci-badge]: https://github.com/hoishing/icon-resize-cli/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/hoishing/icon-resize-cli/actions/workflows/ci.yml
 [pypi-badge]: https://img.shields.io/pypi/v/icon-resize
 [pypi-url]: https://pypi.org/project/icon-resize/
