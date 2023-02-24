@@ -20,19 +20,13 @@
 - lossless compression for png files
 - maintain aspect ratio and transparency
 
-## Requirements
+## Prerequisite
 
-- macOS or Linux
+- macOS or Linux (Windows not tested)
 - python3.10+
-- [poetry]
-- [Typer][typer] `pip install "typer[all]"`
 - [Image Magick][magick] `brew install imagemagick`
 
 ## Usage
-
-- clone the repo `git clone https://github.com/hoishing/icon-resize`
-- install the env `poetry install`
-- start the env `poetry shell`
 
 ```shell
 # default resize to 256, 128, 64

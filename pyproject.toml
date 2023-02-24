@@ -13,7 +13,17 @@ keywords = ["png", "cli", "resize"]
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = { extras = ["all"], version = "^0.7.0" }
+
+[tool.poetry.group.dev.dependencies]
 toml = "^0.10.2"
+pytest = "^7.2.1"
+auto-changelog = "^0.6.0"
+coverage = "^7.2.0"
+genbadge = {extras = ["coverage"], version = "^1.1.0"}
+
+
+[tool.poetry.group.dev]
+optional = true
 
 [build-system]
 requires = ["poetry-core"]
