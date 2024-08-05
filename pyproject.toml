@@ -1,39 +1,28 @@
 [build-system]
-requires = [ "poetry-core",]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "icon-resize"
 version = "0.2.1"
 description = "CLI to create lossless icons in multiple sizes"
-authors = [ "Kelvin Ng <hoishing@gmail.com>",]
+authors = ["Kelvin Ng <hoishing@gmail.com>"]
 readme = "README.md"
-repository = "https://github.com/hoishing/icon-resize-cli"
-homepage = "https://hoishing.github.io/proj/icon-resize-cli"
-keywords = [ "png", "cli", "resize",]
+repository = "https://github.com/hoishing/icon-resize"
+keywords = ["png", "cli", "resize"]
 [[tool.poetry.packages]]
 include = "icon_resize"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
+typer = { extras = ["all"], version = "^0.12.3" }
 
 [tool.poetry.scripts]
 icon-resize = "icon_resize:entry"
-pump = "pump:main"
-
-[tool.poetry.dependencies.typer]
-extras = [ "all",]
-version = "^0.7.0"
-
-[tool.poetry.group.dev]
-optional = true
 
 [tool.poetry.group.dev.dependencies]
 toml = "^0.10.2"
-pytest = "^7.2.1"
+pytest = "^8.3.2"
 auto-changelog = "^0.6.0"
-coverage = "^7.2.0"
-
-[tool.poetry.group.dev.dependencies.genbadge]
-extras = [ "coverage",]
-version = "^1.1.0"
+packaging = "^24.1"
+requests = "^2.32.3"
