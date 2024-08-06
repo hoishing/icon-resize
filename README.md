@@ -1,6 +1,6 @@
 # Icon Resize
 
-[![pypi-badge]][pypi-url] [![black-badge]][black-url] ![mit]
+[![ci-badge]][ci-url] [![pypi-badge]][pypi-url] [![black-badge]][black-url] ![mit]
 
 ![screenshot](https://i.imgur.com/K00hCxN.png)
 
@@ -58,3 +58,5 @@ Open a [github issue] or ping me on [Twitter ![twitter-icon]][Twitter]
 [magick]: https://imagemagick.org
 [pypi-badge]: https://img.shields.io/pypi/v/icon-resize
 [pypi-url]: https://pypi.org/project/icon-resize/
+[ci-badge]: https://github.com/hoishing/icon-resize/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/hoishing/icon-resize/actions/workflows/ci.yml
