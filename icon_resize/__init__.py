@@ -9,7 +9,7 @@ from typer import Argument, Option
 def main(
     src_image: str = Argument(..., help="path to source image"),
     sizes: str = Option(
-        "256,128,64", help="output sizes, comma seperated eg. 512,256,128"
+        "256,128,64", help="output sizes, comma separated eg. 512,256,128"
     ),
     out_folder: str = Option(
         "", help="output folder path, default same as source file"

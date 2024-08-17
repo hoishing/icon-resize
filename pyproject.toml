@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "icon-resize"
-version = "0.2.2"
+version = "0.2.3"
 description = "CLI to create lossless icons in multiple sizes"
 authors = ["Kelvin Ng <hoishing@gmail.com>"]
 readme = "README.md"
@@ -23,6 +23,5 @@ icon-resize = "icon_resize:entry"
 [tool.poetry.group.dev.dependencies]
 toml = "^0.10.2"
 pytest = "^8.3.2"
-auto-changelog = "^0.6.0"
 packaging = "^24.1"
 requests = "^2.32.3"
