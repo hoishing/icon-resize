@@ -1,27 +1,34 @@
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
+[project]
 name = "icon-resize"
-version = "0.2.3"
+version = "0.2.4"
+requires-python = ">=3.12"
 description = "CLI to create lossless icons in multiple sizes"
-authors = ["Kelvin Ng <hoishing@gmail.com>"]
+authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
 readme = "README.md"
-repository = "https://github.com/hoishing/icon-resize"
 keywords = ["png", "cli", "resize"]
-[[tool.poetry.packages]]
-include = "icon_resize"
+dependencies = ["typer>=0.15.2"]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-typer = { extras = ["all"], version = "^0.12.3" }
 
-[tool.poetry.scripts]
-icon-resize = "icon_resize:entry"
+[project.scripts]
+icon_resize = "icon_resize:entry"
 
-[tool.poetry.group.dev.dependencies]
-toml = "^0.10.2"
-pytest = "^8.3.2"
-packaging = "^24.1"
-requests = "^2.32.3"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/icon_resize"]
+
+[tool.ruff]
+isort.no-sections = true
+extend-ignore = ["E203", "E402", "E501", "F401", "F811"]
+
+[dependency-groups]
+dev = ["pytest>=8.3.5"]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+"License" = "https://opensource.org/licenses/MIT"
+repository = "https://github.com/hoishing/icon-resize"

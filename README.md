@@ -1,14 +1,12 @@
 # Icon Resize
 
-[![ci-badge]][ci-url] [![pypi-badge]][pypi-url] [![black-badge]][black-url] ![mit]
+[![ruff-badge]][ruff] [![pypi-badge]][pypi-url] ![MIT] [![uv-badge]][uv]
 
 ![screenshot](https://i.imgur.com/K00hCxN.png)
 
 > CLI to create lossless icons in multiple sizes
 
 [mit]: https://img.shields.io/github/license/hoishing/icon-resize
-[black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
-[black-url]: https://github.com/psf/black
 
 ## Features
 
@@ -49,14 +47,15 @@ eval "$(_ICON_RESIZE_COMPLETE=zsh_source icon_resize)"
 
 ## Questions?
 
-Open a [github issue] or ping me on [Twitter ![twitter-icon]][Twitter]
+Open a [github issue] or ping me on [X]
 
 [github issue]: https://github.com/hoishing/icon-resize-cli/issues
-[Twitter]: https://twitter.com/intent/tweet?text=https://github.com/hoishing/icon-resize-cli/%20%0D@hoishing
-[twitter-icon]: https://api.iconify.design/logos/twitter.svg?width=20
-[typer]: https://typer.tiangolo.com
 [magick]: https://imagemagick.org
 [pypi-badge]: https://img.shields.io/pypi/v/icon-resize
 [pypi-url]: https://pypi.org/project/icon-resize/
-[ci-badge]: https://github.com/hoishing/icon-resize/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/hoishing/icon-resize/actions/workflows/ci.yml
+[ruff-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json
+[ruff]: https://github.com/astral-sh/ruff
+[typer]: https://typer.tiangolo.com
+[uv-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json
+[uv]: https://docs.astral.sh/uv/
+[X]: https://x.com/intent/tweet?text=https://github.com/hoishing/gllm/%20%0D@hoishing
