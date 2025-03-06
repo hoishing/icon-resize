@@ -63,3 +63,6 @@ site/
 # tmp files
 try.*
 *.bak*
+
+# publish
+publish.sh

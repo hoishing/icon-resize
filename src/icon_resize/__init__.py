@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 
-import typer, re
+import os
+import re
+import typer
 from pathlib import Path
-from subprocess import getstatusoutput, check_output, STDOUT
+from subprocess import STDOUT, check_output, getstatusoutput
 from typer import Argument, Option
+
+
+def add_brew_path():
+    os.environ["PATH"] = "/opt/homebrew/bin:" + os.environ["PATH"]
 
 
 def main(
@@ -16,6 +22,7 @@ def main(
     ),
 ):
     """resize icon / image with diff sizes"""
+    add_brew_path()
     check_imagemagick_installed()
 
     src = Path(src_image)
@@ -29,23 +36,22 @@ def main(
             out_folder = Path(out_folder)
             out_folder.mkdir(parents=True, exist_ok=True)
             out_file = out_folder / file_name
+        code, output = getstatusoutput(
+            f"magick convert {src} -resize {size}x{size} {out_file}"
+        )
+        if code != 0:
+            raise Exception(output)
 
-        code, _ = getstatusoutput(f"convert {src} -resize {size}x{size} {out_file}")
-        assert code == 0
         print("resized:", out_file)
 
 
 def check_imagemagick_installed():
     try:
-        # Run the "convert --version" command in Linux or macOS
-        output = check_output(["convert", "--version"], stderr=STDOUT)
+        # Run the "magick --version" command in Windows
+        check_output(["magick", "--version"], stderr=STDOUT)
     except FileNotFoundError:
-        try:
-            # Run the "magick --version" command in Windows
-            output = check_output(["magick", "--version"], stderr=STDOUT)
-        except FileNotFoundError:
-            # If neither command is found, ImageMagick is not installed
-            return False
+        # If neither command is found, ImageMagick is not installed
+        return False
     # If the command runs successfully, ImageMagick is installed
     return True
 

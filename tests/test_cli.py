@@ -1,7 +1,7 @@
 import pytest
-from subprocess import getstatusoutput
 from pathlib import Path
 from shutil import rmtree
+from subprocess import getstatusoutput
 
 # def setup_module(module):
 #     print("-------------- setup before module --------------")

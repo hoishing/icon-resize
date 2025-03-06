@@ -1,6 +1,6 @@
 [project]
 name = "icon-resize"
-version = "0.2.4"
+version = "0.2.8"
 requires-python = ">=3.12"
 description = "CLI to create lossless icons in multiple sizes"
 authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
@@ -10,7 +10,7 @@ dependencies = ["typer>=0.15.2"]
 
 
 [project.scripts]
-icon_resize = "icon_resize:entry"
+icon-resize = "icon_resize:entry"
 
 [build-system]
 requires = ["hatchling"]
@@ -30,5 +30,5 @@ dev = ["pytest>=8.3.5"]
 text = "MIT"
 
 [project.urls]
-"License" = "https://opensource.org/licenses/MIT"
 repository = "https://github.com/hoishing/icon-resize"
+license = "https://opensource.org/licenses/MIT"
