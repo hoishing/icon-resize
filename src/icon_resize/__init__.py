@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 
-import os
 import re
 import typer
 from pathlib import Path
 from subprocess import STDOUT, check_output, getstatusoutput
 from typer import Argument, Option
-
-
-def add_brew_path():
-    os.environ["PATH"] = "/opt/homebrew/bin:" + os.environ["PATH"]
 
 
 def main(
@@ -22,7 +17,6 @@ def main(
     ),
 ):
     """resize icon / image with diff sizes"""
-    add_brew_path()
     check_imagemagick_installed()
 
     src = Path(src_image)
@@ -36,9 +30,7 @@ def main(
             out_folder = Path(out_folder)
             out_folder.mkdir(parents=True, exist_ok=True)
             out_file = out_folder / file_name
-        code, output = getstatusoutput(
-            f"magick convert {src} -resize {size}x{size} {out_file}"
-        )
+        code, output = getstatusoutput(f"magick {src} -resize {size}x{size} {out_file}")
         if code != 0:
             raise Exception(output)
 

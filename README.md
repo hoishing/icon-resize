@@ -28,13 +28,13 @@
 
 ```shell
 # default resize to 256, 128, 64
-icon-resize mic-512
+icon-resize mic-512.png
 
 # specify resize to 128, 64
-icon-resize mic-512 --sizes "128,64"
+icon-resize mic-512.png --sizes "128,64"
 
 # save to 'mic' folder with default sizes
-icon-resize mic-512 --out-folder mic/
+icon-resize mic-512.png --out-folder mic/
 
 # enable autocomplete in current session
 eval "$(_ICON_RESIZE_COMPLETE=zsh_source icon_resize)"
