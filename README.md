@@ -18,11 +18,11 @@
 
 - macOS or Linux (Windows not tested)
 - python3.10+
-- [Image Magick][magick] `brew install imagemagick`
+- [Image Magick], could be installed by `brew install imagemagick`
 
 ## Installation
 
-`pip install icon-resize`
+`uv add icon-resize`
 
 ## Usage
 
@@ -40,22 +40,28 @@ icon-resize mic-512.png --out-folder mic/
 eval "$(_ICON_RESIZE_COMPLETE=zsh_source icon_resize)"
 ```
 
+Or run directly without installation
+
+```shell
+uvx icon-resize mic-512.png --sizes "128,64" --out-folder mic/
+```
+
 ## Technical Details
 
-- use [Typer][typer] for CLI and help docs generation
-- use [Image Magick][magick] for both resize and compress images
+- use [Typer] for CLI and help docs generation
+- use [Image Magick] for both resize and compress images
 
 ## Questions?
 
 Open a [github issue] or ping me on [X]
 
 [github issue]: https://github.com/hoishing/icon-resize-cli/issues
-[magick]: https://imagemagick.org
+[Image Magick]: https://imagemagick.org
 [pypi-badge]: https://img.shields.io/pypi/v/icon-resize
 [pypi-url]: https://pypi.org/project/icon-resize/
 [ruff-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json
 [ruff]: https://github.com/astral-sh/ruff
-[typer]: https://typer.tiangolo.com
+[Typer]: https://typer.tiangolo.com
 [uv-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json
 [uv]: https://docs.astral.sh/uv/
 [X]: https://x.com/intent/tweet?text=https://github.com/hoishing/gllm/%20%0D@hoishing
